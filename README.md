@@ -19,7 +19,7 @@ Create an EKS cluster with at minimum 2 worker nodes (Auto-Scaling Groups are pr
 
 This guide creates a EKS cluster with [eksctl](https://eksctl.io/) using the [ClusterConfig](examples/cluster.yaml) under the examples directory.
 
-**Note**: The ClusterConfig above utilizes the [Bottlerocket OS](https://github.com/bottlerocket-os/bottlerocket). Please refer to the GitHub repository for more information. 
+**Note**: The ClusterConfig above utilizes the [Bottlerocket OS](https://github.com/bottlerocket-os/bottlerocket) for the worker nodes. Please refer to the GitHub repository for more information. 
 
 ### Cluster Autoscaler
 
