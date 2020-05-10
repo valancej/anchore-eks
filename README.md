@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Verify that you have access to and understand the following resources as they will be utilized throughout this guide:
+Verify that you have access to and understand the following as they will be utilized throughout this guide:
 
 - [eksctl](https://eksctl.io/)
 - [Cluster Autoscaler on AWS](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws)
@@ -19,7 +19,7 @@ Create an EKS cluster with at minimum 2 worker nodes (Auto-Scaling Groups are pr
 
 This guide creates a EKS cluster with [eksctl](https://eksctl.io/) using the [ClusterConfig](examples/cluster.yaml) under the examples directory.
 
-**Note**: The ClusterConfig above utilizes the [Bottlerocket OS](https://github.com/bottlerocket-os/bottlerocket. Please refer to the GitHub repository for more information. 
+**Note**: The ClusterConfig above utilizes the [Bottlerocket OS](https://github.com/bottlerocket-os/bottlerocket). Please refer to the GitHub repository for more information. 
 
 ### Cluster Autoscaler
 
