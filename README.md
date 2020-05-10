@@ -17,4 +17,4 @@ Verify that you have access to and understand the following resources as they wi
 
 Create an EKS cluster with at minimum 2 nodes with a total cluster capacity of 8 CPU and 32 GB of memory. For more infomation on sizing, please refer to the section [capacity planning](#capacity-planning).
 
-This guide creates a EKS cluster with [eksctl](https://eksctl.io/) using the ClusterConfig under the [examples directory](examples)
+This guide creates a EKS cluster with [eksctl](https://eksctl.io/) using the [ClusterConfig](examples/cluster.yaml) under the examples directory.
