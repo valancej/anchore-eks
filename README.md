@@ -15,6 +15,14 @@ Verify that you have access to and understand the following resources as they wi
 
 ## Create an EKS cluster
 
-Create an EKS cluster with at minimum 2 nodes with a total cluster capacity of 8 CPU and 32 GB of memory. For more infomation on sizing, please refer to the section [capacity planning](#capacity-planning).
+Create an EKS cluster with at minimum 2 worker nodes (Auto-Scaling Groups are preferrable) with a total cluster capacity of 8 CPU and 32 GB of memory (more is recommend to scale out Anchore analyzer services). For more infomation on sizing, please refer to the section [capacity planning](#capacity-planning).
 
 This guide creates a EKS cluster with [eksctl](https://eksctl.io/) using the [ClusterConfig](examples/cluster.yaml) under the examples directory.
+
+**Note**: The ClusterConfig above utilizes the [Bottlerocket OS](https://github.com/bottlerocket-os/bottlerocket. Please refer to the GitHub repository for more information. 
+
+### Cluster Autoscaler
+
+**Note**: The following is optional and not required for installation of Anchore. However, it is highly recommended you architect your cluster appropriate with the correct resources and services to enable scalability.
+
+Configure and install the [AWS CLuster Autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws). 
