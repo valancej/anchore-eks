@@ -1,0 +1,24 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: anchore-k8s-testing
+  region: us-east-1
+  version: '1.15'
+
+nodeGroups:
+  - name: anchore-k8s-workers
+    labels: { purpose: anchore-services }
+    instanceType: m5a.xlarge
+    availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
+    amiFamily: Bottlerocket
+    desiredCapacity: 2
+    maxSize: 5
+    minSize: 1
+    volumeSize: 30
+    iam:
+      withAddOnPolicies:
+        autoScaler: true
+    ssh:
+      allow: false
+availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
